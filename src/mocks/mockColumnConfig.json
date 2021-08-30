@@ -1,5 +1,5 @@
 [
   {"name": "id", "width": 50},
   {"name": "name", "width": 700},
-  {"name": "lastName", "width": 100}
+  {"name": "lastName", "width": 100, "isSticky": true}
 ]

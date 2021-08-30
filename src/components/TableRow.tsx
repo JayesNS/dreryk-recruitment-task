@@ -6,13 +6,6 @@ export const TableRow = styled.div<any>`
   color: #0a0a0a;
   background: #f6f6ff;
 
-  & :last-child {
-    position: sticky;
-    right: 0;
-    border-left-style: double;
-    border-left-width: 3px;
-  }
-
   & > * {
     background: inherit;
   }

@@ -15,12 +15,13 @@ export const Table = <T extends Record<string ,any>>(props: TableProps<T>) => {
   const renderTableHeader = useCallback(() => {
     return (
       <TableHeader>
-        {config.map(({name, width}) => (
+        {config.map(({name, width, isSticky}) => (
           <TableHeaderCell
             key={name}
             width={`${width}px`}
             onClick={() => onHeaderCellClick(name)}
             sortBy={name === sortBy}
+            isSticky={isSticky}
           >
             {name}
           </TableHeaderCell>
@@ -32,7 +33,7 @@ export const Table = <T extends Record<string ,any>>(props: TableProps<T>) => {
   const renderTableContent = useCallback(() => {
     return data.map((item: T) => (
       <TableRow key={item.id}>
-        {config.map(({name, width}) => (<TableCell key={name} width={`${width}px`}>{item[name]}</TableCell>))}
+        {config.map(({name, width, isSticky}) => (<TableCell key={name} width={`${width}px`} isSticky={isSticky}>{item[name]}</TableCell>))}
       </TableRow>
     ));
   }, [data, config]);

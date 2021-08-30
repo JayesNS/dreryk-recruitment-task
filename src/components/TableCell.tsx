@@ -12,6 +12,13 @@ export const TableCell = styled.div<any>`
       padding-left: 4px;
     }
   `: ''}
+
+  ${({isSticky}) => isSticky ? css`
+    position: sticky;
+    right: 0;
+    border-left-style: double;
+    border-left-width: 3px;
+  ` : ''}
 `;
 
 export const TableHeaderCell = styled(TableCell)`
