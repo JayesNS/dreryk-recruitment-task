@@ -7,6 +7,7 @@ import { TableHeader, TableRow } from './TableRow';
 
 const TableWrapper = styled.div`
   overflow-x: scroll;
+  margin: 8px;
 `;
 
 export const Table = <T extends Record<string ,any>>(props: TableProps<T>) => {

@@ -4,7 +4,7 @@ export const TableCell = styled.div<any>`
   width: ${({width}) => width ?? 'auto'};
   display: inline-block;
   padding: 2px 4px;
-  border: 1px solid #0a0a0a;
+  border: 1px solid ${({theme}) => theme.textColor};
 
   ${({sortBy}) => sortBy ? css`
     &::after {
@@ -22,6 +22,6 @@ export const TableCell = styled.div<any>`
 `;
 
 export const TableHeaderCell = styled(TableCell)`
-  background: #a0a0ff;
+  background: ${({theme}) => theme.primary};
   cursor: pointer;
 `;

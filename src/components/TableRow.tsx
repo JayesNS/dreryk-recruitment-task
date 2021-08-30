@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const TableRow = styled.div<any>`
   width: max-content;
-  font-family: Roboto, sans-serif;
-  color: #0a0a0a;
-  background: #f6f6ff;
+  font-family: ${({theme}) => theme.font}, sans-serif;
+  color: ${({theme}) => theme.textColor};
+  background: ${({theme}) => theme.backgroundColor};
 
   & > * {
     background: inherit;
@@ -17,7 +17,7 @@ export const TableRow = styled.div<any>`
 
 export const TableHeader = styled(TableRow)`
   text-align: center;
-  font-family: Lato, sans-serif;
+  font-family: ${({theme}) => theme.headerFont}, sans-serif;
   font-weight: 700;
-  background: #a0a0ff;
+  background: ${({theme}) => theme.primary};
 `;
