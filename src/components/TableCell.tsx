@@ -5,6 +5,7 @@ export const TableCell = styled.div<any>`
   display: inline-block;
   padding: 2px 4px;
   border: 1px solid ${({ theme }) => theme.textColor};
+  box-sizing: border-box;
 
   ${({ sortBy }) => (sortBy ? css`
     &::after {
