@@ -8,4 +8,4 @@ export const sortBy = <T extends Record<string, any>>(array: T[], sortByFields: 
     }, 0);
   });
   return sorted;
-}
+};
